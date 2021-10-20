@@ -1,7 +1,7 @@
 import pygame
 import pygame.freetype 
 pygame.init()
-GAME_FONT = pygame.freetype.Font("assets/fonts/OpenSans-Bold.ttf", 20)
+GAME_FONT = pygame.freetype.Font("assets/fonts/OpenSans-Bold.ttf", 15)
 allButton =[]
 class Button:
     height=0
@@ -42,4 +42,4 @@ class Button:
             return True
         return False
 
-        
+    

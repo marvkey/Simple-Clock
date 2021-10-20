@@ -1,7 +1,5 @@
 import sys, pygame
-
-
-import core,timer
+import core,timer,AlarmClock
 
 
 background_colour = (255,255,255)
@@ -11,7 +9,7 @@ pygame.display.set_caption('clock app')
 screen.fill(background_colour)
 pygame.display.flip()
 running = True
-Gui = timer.Timer()
+Gui = AlarmClock.AlarmClock()
 def main():
     while True:
         Gui.onupdate()
@@ -22,6 +20,9 @@ def main():
     
         for temp in core.allButton:
             temp.Render(screen)
+        
+        for alarmClock in AlarmClock.allAlarm:
+            alarmClock.CheckAlarm()
     pygame.quit()
 
 if __name__ == "__main__":
